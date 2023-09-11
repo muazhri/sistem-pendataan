@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\RantingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/pengurus', [PengurusController::class, 'index']);
+
+
+
+
+Route::get('/ranting', [RantingController::class, 'index']);

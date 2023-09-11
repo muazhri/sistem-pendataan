@@ -25,7 +25,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/ranting">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Data Ranting</span></a>
     </li>

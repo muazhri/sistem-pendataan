@@ -5,6 +5,7 @@
 <div class="container-fluid">
 
 
+
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -28,8 +29,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            @foreach ($pengurus as $item)
+                        @foreach ($pengurus as $item)
+                            <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->photo }}</td>
                                 <td>{{ $item->name }}</td>
@@ -40,8 +41,8 @@
                                 <td>{{ $item->position }}</td>
                                 <td>{{ $item->ranting->name }}</td>
                                 <td></td>
-                            @endforeach
-                        </tr>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
