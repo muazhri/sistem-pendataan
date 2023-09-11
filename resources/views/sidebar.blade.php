@@ -19,7 +19,7 @@
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/pengurus">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Data Pengurus</span></a>
     </li>
