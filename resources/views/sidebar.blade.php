@@ -31,13 +31,13 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/alumni">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Data Alumni</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/anggota">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Data Anggota</span></a>
     </li>

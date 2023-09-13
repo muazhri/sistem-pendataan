@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('place_birth');
             $table->date('date_birth');
-            $table->date('position');
+            $table->string('position');
             $table->timestamps();
         });
     }
