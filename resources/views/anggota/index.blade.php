@@ -1,15 +1,15 @@
 @extends('layouts.app')
-@section('title', 'Data pengurus')
+@section('title', 'Data Anggota')
 @section('content')
 
 <div class="container-fluid">
 
-    <a href="/create" class="text-white btn btn-primary my-2" type="button">Tambah Data</a>
+
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Pengurus</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Data Anggota</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -29,7 +29,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($pengurus as $item)
+                        @foreach ($anggota as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->photo }}</td>
@@ -40,11 +40,7 @@
                                 <td>{{ $item->date_birth }}</td>
                                 <td>{{ $item->position }}</td>
                                 <td>{{ $item->ranting->name }}</td>
-                                <td>
-                                    <a href="" type="button" value="{{ $item->id }}" class="btn btn-warning my-2">Edit</a>
-                                    <a href="" type="button" value="{{ $item->id }}" class="btn btn-danger">hapus</a>
-                                </td>
-
+                                <td></td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -52,5 +48,7 @@
             </div>
         </div>
     </div>
+
 </div>
+    
 @endsection

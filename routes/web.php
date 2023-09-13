@@ -1,8 +1,12 @@
 <?php
 
+use App\Models\Alumni;
+use App\Models\Anggota;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\AlumniController;
+use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\RantingController;
+use App\Http\Controllers\PengurusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +24,24 @@ Route::get('/', function () {
 });
 
 Route::get('/pengurus', [PengurusController::class, 'index']);
+Route::get('/create', [PengurusController::class, 'create']);
 
 
 
 
 Route::get('/ranting', [RantingController::class, 'index']);
+
+
+
+
+Route::get('/alumni', [AlumniController::class, 'index']);
+
+
+
+
+Route::get('/anggota', [AnggotaController::class, 'index']);
+
+
+
+
+
