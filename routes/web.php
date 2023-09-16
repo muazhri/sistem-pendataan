@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 Route::get('/pengurus', [PengurusController::class, 'index']);
 Route::get('/create', [PengurusController::class, 'create']);
+Route::post('/pengurus', [PengurusController::class,'store']);
 
 
 

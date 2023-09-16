@@ -2,6 +2,14 @@
 @section('title', 'Data pengurus')
 @section('content')
 
+@if (Session::has('status'))
+<div class="w-full max-w-sm mx-auto">
+    <div class="py-3 pl-4 pr-10 leading-normal text-green-700 bg-green-100 rounded-lg" role="alert">
+        <p>{{ Session::get('message') }}</p>
+    </div>
+</div>
+@endif
+
 <div class="container-fluid">
 
     <a href="/create" class="text-white btn btn-primary my-2" type="button">Tambah Data</a>
