@@ -2,6 +2,7 @@
 @section('title', 'Data pengurus')
 @section('content')
 
+
 @if (Session::has('status'))
 <div class="w-full max-w-sm mx-auto">
     <div class="py-3 pl-4 pr-10 leading-normal text-green-700 bg-green-100 rounded-lg" role="alert">
@@ -32,7 +33,6 @@
                             <th>Tempat Lahir</th>
                             <th>Tanggal Lahir</th>
                             <th>Position</th>
-                            <th>Ranting</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -40,14 +40,13 @@
                         @foreach ($pengurus as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->photo }}</td>
+                                <td><img src="{{ asset('storage/photo/'.$item->images) }}" alt="" width="200px"></td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->gender }}</td>
                                 <td>{{ $item->address }}</td>
                                 <td>{{ $item->place_birth }}</td>
                                 <td>{{ $item->date_birth }}</td>
                                 <td>{{ $item->position }}</td>
-                                <td>{{ $item->ranting->name }}</td>
                                 <td>
                                     <a href="" type="button" value="{{ $item->id }}" class="btn btn-warning my-2">Edit</a>
                                     <a href="" type="button" value="{{ $item->id }}" class="btn btn-danger">hapus</a>

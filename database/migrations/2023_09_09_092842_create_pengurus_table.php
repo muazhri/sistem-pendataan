@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('pengurus', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('photo');
-            $table->string('gender');
-            $table->string('address');
-            $table->string('place_birth');
-            $table->date('date_birth');
-            $table->string('position');
+            $table->string('name')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('address')->nullable();
+            $table->string('place_birth')->nullable();
+            $table->date('date_birth')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

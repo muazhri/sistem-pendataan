@@ -16,7 +16,7 @@
 
 <a href="/pengurus" class="text-white btn btn-primary my-2" type="button">Kembali</a>
 
-<form action="/pengurus" method="post" enctype="multipart/form-data">
+<form action="pengurus" method="post" enctype="multipart/form-data">
   @csrf
   <div class="row">
     <div class="col-12">
@@ -26,26 +26,37 @@
         </div>
         <div class="card-body">
           <div class="form-group">
-              <label for="formFile" class="form-label">Photo</label>
-              <input type="file" class="form-control" id="formFile">
+              <label for="photo" class="form-label">Photo</label>
+              <br>
+              <input type="file" name="photo" id="photo">
           </div>
           <div class="form-group">
-            <label for="nama_barang">Nama Barang</label>
-            <input type="text" class="form-control" id="nama_barang" name="nama_barang" value="">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" class="form-control" id="name" name="name" value="">
           </div>
           <div class="form-group">
-            <label for="id_kategori">Kategori Barang</label>
-            <select name="id_kategori" id="id_kategori" class="custom-select">
-              <option value="" selected disabled hidden>-- Pilih Kategori --</option>
+            <label for="gender">Jenis - Kelamin</label>
+            <select name="gender" id="gender" class="custom-select">
+              <option value="" selected disabled hidden>-- Pilih Jenis Kelamin --</option>
+                  <option value="L">Laki-Laki</option>
+                  <option value="P">Perempuan</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="harga">Harga Barang</label>
-            <input type="number" class="form-control" id="harga" name="harga" value="">
+            <label for="address">Alamat</label>
+            <input type="text" class="form-control" id="address" name="address" value="">
           </div>
           <div class="form-group">
-            <label for="jumlah">Jumlah Barang</label>
-            <input type="number" class="form-control" id="jumlah" name="jumlah" value="">
+            <label for="place_birth">Tempat Lahir</label>
+            <input type="text" class="form-control" id="place_birth" name="place_birth" value="">
+          </div>
+          <div class="form-group">
+            <label for="date_birth">Tanggal Lahir</label>
+            <input type="date" class="form-control" id="date_birth" name="date_birth" value="">
+          </div>
+          <div class="form-group">
+            <label for="position">Jabatan</label>
+            <input type="text" class="form-control" id="position" name="position" value="">
           </div>
         </div>
         <div class="card-footer">

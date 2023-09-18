@@ -14,7 +14,7 @@ class Pengurus extends Model
     protected $table = 'pengurus';
 
     protected $fillable = [
-        'photo',
+        'images',
         'name',
         'gender',
         'address',
@@ -28,8 +28,4 @@ class Pengurus extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function ranting()
-    {
-        return $this->belongsTo(Ranting::class);
-    }
 }

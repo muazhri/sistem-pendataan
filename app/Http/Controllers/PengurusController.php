@@ -12,14 +12,13 @@ class PengurusController extends Controller
 {
     public function index()
     {
-        $pengurus = Pengurus::with('ranting')->get();
+        $pengurus = Pengurus::all();
         return view('pengurus.index', ['pengurus' => $pengurus]);    
     }
 
     public function create() 
     {
-        $ranting = Ranting::select('id', 'name');
-        return view('pengurus.create', ['ranting' => $ranting]);
+        return view('pengurus.create');
     }
 
         public function store(PengurusCreateRequest $request) //
@@ -29,9 +28,10 @@ class PengurusController extends Controller
             if($request->file('photo')){
                 $extension = $request->file('photo')->getClientOriginalExtension();
                 $newName = $request->name.'-'.now()->timestamp.'.'.$extension;
-                $request->file('photo')->storeAs('photos', $newName);
+                $request->file('photo')->storeAs('photo', $newName);
             }
-    
+            
+            $request['images'] = $newName;
             $pengurus = Pengurus::create($request->all());
     
             if ($pengurus) {
@@ -39,6 +39,6 @@ class PengurusController extends Controller
                 Session::flash('message', 'Berhasil Menambahkan Data Pengurus');
             }
     
-            return redirect('pengurus.index');
+            return redirect('/pengurus');
         }
 }

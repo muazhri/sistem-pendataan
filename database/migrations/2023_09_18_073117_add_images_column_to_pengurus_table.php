@@ -14,21 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::table('pengurus', function (Blueprint $table) {
-            $table->unsignedBigInteger('ranting_id')->required()->after('position');
-            $table->foreign('ranting_id')->references('id')->on('rantings')->onDelete('restrict');
+            $table->string('images')->nullable()->after('id');
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations
      *
      * @return void
      */
     public function down()
     {
         Schema::table('pengurus', function (Blueprint $table) {
-            $table->dropForeign(['ranting_id']);
-            $table->dropColumn('ranting_id');
+            if(Schema::hasColumn('pengurus', 'images')){
+                $table->dropColumn('images');
+            }
         });
     }
 };

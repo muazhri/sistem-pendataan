@@ -23,10 +23,6 @@ class Ranting extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function pengurus()
-    {
-        return $this->hasMany(Pengurus::class);
-    }
 
     public function alumni()
     {
