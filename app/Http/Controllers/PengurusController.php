@@ -7,6 +7,7 @@ use App\Models\Pengurus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\PengurusCreateRequest;
+use App\Http\Requests\PengurusUpdateRequest;
 
 class PengurusController extends Controller
 {
@@ -18,7 +19,7 @@ class PengurusController extends Controller
 
     public function create() 
     {
-        return view('pengurus.create');
+        return view('pengurus.pengurus-create');
     }
 
         public function store(PengurusCreateRequest $request) //
@@ -39,6 +40,19 @@ class PengurusController extends Controller
                 Session::flash('message', 'Berhasil Menambahkan Data Pengurus');
             }
     
+            return redirect('/pengurus');
+        }
+
+        public function edit(Request $request, $id)
+        {
+            $pengurus = Pengurus::findOrFail($id);
+            return view('pengurus.pengurus-edit', ['pengurus' => $pengurus]);
+        }
+
+        public function update(Request $request, $id)
+        {
+            $pengurus = Pengurus::findOrFail($id);
+            $pengurus->update($request->all());
             return redirect('/pengurus');
         }
 }

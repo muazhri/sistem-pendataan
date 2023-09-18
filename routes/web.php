@@ -24,8 +24,10 @@ Route::get('/', function () {
 });
 
 Route::get('/pengurus', [PengurusController::class, 'index']);
-Route::get('/create', [PengurusController::class, 'create']);
+Route::get('/pengurus-create', [PengurusController::class, 'create']);
 Route::post('/pengurus', [PengurusController::class,'store']);
+Route::get('/pengurus-edit/{id}', [PengurusController::class,'edit']);
+Route::put('/pengurus/{id}', [PengurusController::class,'update']);
 
 
 

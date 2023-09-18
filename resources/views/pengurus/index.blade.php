@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 
-    <a href="/create" class="text-white btn btn-primary my-2" type="button">Tambah Data</a>
+    <a href="/pengurus-create" class="text-white btn btn-primary my-2" type="button">Tambah Data</a>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
@@ -48,7 +48,7 @@
                                 <td>{{ $item->date_birth }}</td>
                                 <td>{{ $item->position }}</td>
                                 <td>
-                                    <a href="" type="button" value="{{ $item->id }}" class="btn btn-warning my-2">Edit</a>
+                                    <a href="pengurus-edit/{{ $item->id }}" class="btn btn-warning my-2">Edit</a>
                                     <a href="" type="button" value="{{ $item->id }}" class="btn btn-danger">hapus</a>
                                 </td>
 
